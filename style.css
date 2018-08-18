@@ -1,199 +1,166 @@
-/* Older browsers */
-html {
-  font: 16px;
-}
-/* Modern browsers only need this one */
-@media screen and (min-width: 25em) {
-  html {
-    font-size: calc(16px + (24 - 16) * (100vw - 300px) / (1080 - 300));
-  }
-}
-/* Safari <8 and IE <11 */
-@media screen and (min-width: 25em) {
-  html {
-    font-size: calc(16px + (24 - 16) * (100vw - 300px) / (1080 - 300));
-  }
-}
-@media screen and (min-width: 50em) {
-  html {
-    font-size: calc(16px + (24 - 16) * (100vw - 300px) / (1080 - 300));
-  }
-}
-body {
+body{
   background-color: #2a212c;
-  width: 100%;
 }
-h1 {
-  text-align: center;
-  color: #678e00;
-  font-size: 1.5em;
-  font-weight: 700;
-}
-#calc-body {
-  border: 2px solid #678e00;
-  border-radius: 10px;
-  background-color: #504055;
-  min-width: 300px;
-  max-width: 1080px;
-  width: 30%;
-}
-#output {
-  background-color: #678e00;
-  font-family: "Orbitron" sans-serif;
-  font-size: 16px;
-  font-size: 5vw;
-  letter-spacing: 0.1;
-  width: 100%;
-}
-#answer {
-  text-align: right;
-  position: relative;
-  margin-right: 6px;
-}
-.buttons {
-  text-align: center;
-  position: relative;
-}
-button {
-  background-color: #2a212c;
-  font-family: "Saira Semi Condensed", sans-serif;
-  font-weight: bold;
+   
+#calc-body{
+    height: 70%;
+    width: 90%;
+    border: 2px solid #678e00;
+    border-radius: 10px; 
+    background-color: #504055;
+    margin: 0 auto;
+    padding: 10px 10px 0 10px;
+    display: grid;
+    grid-auto-rows: 20% 78%;
+    grid-template-areas: "output" "buttons";
+    min-height: 300px;
+    min-width: 400px;
+  }
+
+  h1{
+    text-align: center;
+    color: #678e00;
+  }
+
+  #output{
+    background-color: #678e00; 
+    border-radius: 10px;
+    font-family: 'Orbitron', sans-serif;
+    grid-area: output;
+    letter-spacing: 0.1;
+    font-size: 13vh;
+    text-align: right;
+  } 
+
+  .buttons{
+    padding-top: 5px;
+    grid-area: buttons;
+    display: grid;
+    grid-auto-rows: repeat(5, 20%);
+    gap: 1px 5px;
+  }
+
+  .buttons-first{
+    padding-top: 5px;
+    display: grid;
+    grid-auto-columns: 50% 25% 25%;
+    grid-template-areas: "erase plusminus division"
+  }
+
+  #erase{
+    grid-area: erase;
+    
+  }
+
+  #plusminus{
+    grid-area: plusminus;
+    
+  }
+
+  #dvision{
+    grid-area: division;
+    
+  }
+
+  .buttons-second{
+    display: grid;
+    grid-auto-columns: 25% 25% 25% 25%;
+    grid-template-areas: "seven eight nine multiply";
+  }
+
+  #seven{
+    grid-area: seven;
+  }
+
+  #eight{
+    grid-area: eight;
+  }
+
+  #nine{
+    grid-area: nine;
+  }
+
+  #multiply{
+    grid-area: multiply;
+  }
+
+  .buttons-third{
+    display: grid;
+    grid-auto-columns: 25% 25% 25% 25%;
+    grid-template-areas: "four five six subtract"
+  }
+
+  #four{
+    grid-area: four;
+  }
+
+  #five{
+    grid-area: five;
+  }
+
+  #six{
+    grid-area: six;
+  }
+  
+  #subtract{
+    grid-area: subtract;
+  }
+
+  .buttons-fourth{
+    display: grid;
+    grid-auto-columns: 25% 25% 25% 25%;
+    grid-template-areas: "one two three addition";
+  }
+
+  #one{
+    grid-area: one;
+  }
+
+  #two{
+    grid-area: two;
+  }
+
+  #three{
+    grid-area: three;
+  }
+
+  #addition{
+    grid-area: addition;
+  }
+
+  .buttons-fifth{
+    display: grid;
+    grid-auto-columns: 50% 25% 25%;
+    grid-template-areas: "zero decimal equal"
+  }
+
+  #zero{
+    grid-area: zero;
+  }
+
+  button{
+    background-color: #2a212c;
+    font-family: 'Saira Semi Condensed', sans-serif;  
   color: #678e00;
   border: 1px solid #678e00;
-}
-.button:hover {
-  background-color: #3e8e41;
-}
-.button:active {
-  background-color: #3e8e41;
-  box-shadow: 0 5px #666;
-/*transform: translateY(4px);*/
-}
-#erase {
-  float: left;
-  clear: none;
-  text-align: inherit;
-  width: 48.5%;
-  margin-left: 0%;
-  margin-right: 3%;
-}
-#erase::after {
-  content: '';
-  display: table;
-  clear: both;
-}
-#erase:last-child {
-  margin-right: 0%;
-}
-#plusminus {
-  float: left;
-  clear: none;
-  text-align: inherit;
-  width: 22.75%;
-  margin-left: 0%;
-  margin-right: 3%;
-}
-#plusminus::after {
-  content: '';
-  display: table;
-  clear: both;
-}
-#plusminus:last-child {
-  margin-right: 0%;
-}
-#division {
-  float: left;
-  clear: none;
-  text-align: inherit;
-  width: 22.75%;
-  margin-left: 0%;
-  margin-right: 3%;
-}
-#division::after {
-  content: '';
-  display: table;
-  clear: both;
-}
-#division:last-child {
-  margin-right: 0%;
-}
-.buttons-second > button {
-  float: left;
-  clear: none;
-  text-align: inherit;
-  width: 22.75%;
-  margin-left: 0%;
-  margin-right: 3%;
-}
-.buttons-second > button::after {
-  content: '';
-  display: table;
-  clear: both;
-}
-.buttons-second > button:last-child {
-  margin-right: 0%;
-}
-.buttons-third > button {
-  float: left;
-  clear: none;
-  text-align: inherit;
-  width: 22.75%;
-  margin-left: 0%;
-  margin-right: 3%;
-}
-.buttons-third > button::after {
-  content: '';
-  display: table;
-  clear: both;
-}
-.buttons-third > button:last-child {
-  margin-right: 0%;
-}
-.buttons-fourth > button {
-  float: left;
-  clear: none;
-  text-align: inherit;
-  width: 22.75%;
-  margin-left: 0%;
-  margin-right: 3%;
-}
-.buttons-fourth > button::after {
-  content: '';
-  display: table;
-  clear: both;
-}
-.buttons-fourth > button:last-child {
-  margin-right: 0%;
-}
-#zero {
-  float: left;
-  clear: none;
-  text-align: inherit;
-  width: 48.5%;
-  margin-left: 0%;
-  margin-right: 3%;
-}
-#zero::after {
-  content: '';
-  display: table;
-  clear: both;
-}
-#zero:last-child {
-  margin-right: 0%;
-}
-#equal {
-  float: left;
-  clear: none;
-  text-align: inherit;
-  width: 22.75%;
-  margin-left: 0%;
-  margin-right: 3%;
-}
-#equal::after {
-  content: '';
-  display: table;
-  clear: both;
-}
-#equal:last-child {
-  margin-right: 0%;
-}
+  }
+
+  button:hover {
+    background-color: #3e8e41;
+  }
+  button:active {
+    background-color: #3e8e41;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+  }
+
+  @media (min-width: 40em) {
+    #calc-body{
+      height: 40%;
+      width: 30%;
+    }
+
+    #output{
+      font-size: 8vh;
+    }
+  }
