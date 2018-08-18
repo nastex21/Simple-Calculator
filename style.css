@@ -1,0 +1,199 @@
+/* Older browsers */
+html {
+  font: 16px;
+}
+/* Modern browsers only need this one */
+@media screen and (min-width: 25em) {
+  html {
+    font-size: calc(16px + (24 - 16) * (100vw - 300px) / (1080 - 300));
+  }
+}
+/* Safari <8 and IE <11 */
+@media screen and (min-width: 25em) {
+  html {
+    font-size: calc(16px + (24 - 16) * (100vw - 300px) / (1080 - 300));
+  }
+}
+@media screen and (min-width: 50em) {
+  html {
+    font-size: calc(16px + (24 - 16) * (100vw - 300px) / (1080 - 300));
+  }
+}
+body {
+  background-color: #2a212c;
+  width: 100%;
+}
+h1 {
+  text-align: center;
+  color: #678e00;
+  font-size: 1.5em;
+  font-weight: 700;
+}
+#calc-body {
+  border: 2px solid #678e00;
+  border-radius: 10px;
+  background-color: #504055;
+  min-width: 300px;
+  max-width: 1080px;
+  width: 30%;
+}
+#output {
+  background-color: #678e00;
+  font-family: "Orbitron" sans-serif;
+  font-size: 16px;
+  font-size: 5vw;
+  letter-spacing: 0.1;
+  width: 100%;
+}
+#answer {
+  text-align: right;
+  position: relative;
+  margin-right: 6px;
+}
+.buttons {
+  text-align: center;
+  position: relative;
+}
+button {
+  background-color: #2a212c;
+  font-family: "Saira Semi Condensed", sans-serif;
+  font-weight: bold;
+  color: #678e00;
+  border: 1px solid #678e00;
+}
+.button:hover {
+  background-color: #3e8e41;
+}
+.button:active {
+  background-color: #3e8e41;
+  box-shadow: 0 5px #666;
+/*transform: translateY(4px);*/
+}
+#erase {
+  float: left;
+  clear: none;
+  text-align: inherit;
+  width: 48.5%;
+  margin-left: 0%;
+  margin-right: 3%;
+}
+#erase::after {
+  content: '';
+  display: table;
+  clear: both;
+}
+#erase:last-child {
+  margin-right: 0%;
+}
+#plusminus {
+  float: left;
+  clear: none;
+  text-align: inherit;
+  width: 22.75%;
+  margin-left: 0%;
+  margin-right: 3%;
+}
+#plusminus::after {
+  content: '';
+  display: table;
+  clear: both;
+}
+#plusminus:last-child {
+  margin-right: 0%;
+}
+#division {
+  float: left;
+  clear: none;
+  text-align: inherit;
+  width: 22.75%;
+  margin-left: 0%;
+  margin-right: 3%;
+}
+#division::after {
+  content: '';
+  display: table;
+  clear: both;
+}
+#division:last-child {
+  margin-right: 0%;
+}
+.buttons-second > button {
+  float: left;
+  clear: none;
+  text-align: inherit;
+  width: 22.75%;
+  margin-left: 0%;
+  margin-right: 3%;
+}
+.buttons-second > button::after {
+  content: '';
+  display: table;
+  clear: both;
+}
+.buttons-second > button:last-child {
+  margin-right: 0%;
+}
+.buttons-third > button {
+  float: left;
+  clear: none;
+  text-align: inherit;
+  width: 22.75%;
+  margin-left: 0%;
+  margin-right: 3%;
+}
+.buttons-third > button::after {
+  content: '';
+  display: table;
+  clear: both;
+}
+.buttons-third > button:last-child {
+  margin-right: 0%;
+}
+.buttons-fourth > button {
+  float: left;
+  clear: none;
+  text-align: inherit;
+  width: 22.75%;
+  margin-left: 0%;
+  margin-right: 3%;
+}
+.buttons-fourth > button::after {
+  content: '';
+  display: table;
+  clear: both;
+}
+.buttons-fourth > button:last-child {
+  margin-right: 0%;
+}
+#zero {
+  float: left;
+  clear: none;
+  text-align: inherit;
+  width: 48.5%;
+  margin-left: 0%;
+  margin-right: 3%;
+}
+#zero::after {
+  content: '';
+  display: table;
+  clear: both;
+}
+#zero:last-child {
+  margin-right: 0%;
+}
+#equal {
+  float: left;
+  clear: none;
+  text-align: inherit;
+  width: 22.75%;
+  margin-left: 0%;
+  margin-right: 3%;
+}
+#equal::after {
+  content: '';
+  display: table;
+  clear: both;
+}
+#equal:last-child {
+  margin-right: 0%;
+}

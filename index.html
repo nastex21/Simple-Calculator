@@ -1,0 +1,65 @@
+<html>
+<head>
+    <title>JS Calculator</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="https://fonts.googleapis.com/css?family=Saira+Semi+Condensed:extra-bold" rel="stylesheet">
+    <link href='https://fonts.googleapis.com/css?family=Orbitron' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h1>Simple Javascript Calculator</h1>
+    <div id="calc-body">
+        <div id="output">
+            <span id="answer">    
+            </span>
+        </div>
+        <!-- use for output of calculator-->
+        <div class="buttons">
+            <div class="buttons-first">
+                <button id="erase" value="&#65;&#67;">&#65;&#67;</button>
+                <button id="plusminus">&#43;&#47;&#45;</button>
+                <button id="division" value="&#247;">/</button>
+            </div>
+
+            <div class="buttons-second fourth">
+                <button class="second-row" id="seven" value=7>&#55;</button>
+                <button class="second-row" id="eight" value=8>&#56;</button>
+                <button class="second-row" id="nine" value=9>&#57;</button>
+                <button class="second-row" id="multiply" value="&#215;">&#215;</button>
+            </div>
+
+            <div class="buttons-third fourth">
+                <button class="third-row" id="four" value=4>&#52;</button>
+                <button class="third-row" id="five" value=5>&#53;</button>
+                <button class="third-row" id="six" value=6>&#54;</button>
+                <button class="third-row" id="subtract" value="&#45;">&#45;</button>
+            </div>
+
+            <div class="buttons-fourth fourth">
+                <button id="one" value=1>&#49;</button>
+                <button id="two" value=2>&#50;</button>
+                <button id="three" value=3>&#51;</button>
+                <button id="addition" value="&#43;">&#43;</button>
+            </div>
+
+            <div class="buttons-fifth fourth">
+                <button id="zero" value=0>&#48;</button>
+                <button id="decimal" class="lastButton" value="&#46;">&#46;</button>
+                <button id="equal" value="&#61;">&#61;</button>
+
+            </div>
+        </div>
+    </div>
+        <!-- Load the CDN first -->
+        <script src="http://code.jquery.com/jquery-3.2.1.min.js"></script>
+
+        <!-- If CDN fails to load, serve up the local version -->
+        <script>
+            window.jQuery || document.write('<script src="javascript/jquery-3.2.1.min.js"><\/script>');
+
+        </script>
+        <script src="javascript/script.js"></script>
+</body>
+</html>
