@@ -1,166 +1,182 @@
-body{
+html,
+body {
+  height: 100%;
+}
+
+body {
   background-color: #2a212c;
 }
-   
-#calc-body{
-    height: 70%;
-    width: 90%;
-    border: 2px solid #678e00;
-    border-radius: 10px; 
-    background-color: #504055;
-    margin: 0 auto;
-    padding: 10px 10px 0 10px;
-    display: grid;
-    grid-auto-rows: 20% 78%;
-    grid-template-areas: "output" "buttons";
-    min-height: 300px;
-    min-width: 400px;
-  }
 
-  h1{
-    text-align: center;
-    color: #678e00;
-  }
+#calc-body {
+  height: 70%;
+  width: 90%;
+  border: 2px solid #678e00;
+  border-radius: 10px;
+  background-color: #504055;
+  margin: 0 auto;
+  padding: 10px 10px 0 10px;
+  display: grid;
+  grid-auto-rows: 20% 78%;
+  grid-template-areas: "output" "buttons";
+}
 
-  #output{
-    background-color: #678e00; 
-    border-radius: 10px;
-    font-family: 'Orbitron', sans-serif;
-    grid-area: output;
-    letter-spacing: 0.1;
-    font-size: 13vh;
-    text-align: right;
-  } 
+h1 {
+  text-align: center;
+  color: #678e00;
+}
 
-  .buttons{
-    padding-top: 5px;
-    grid-area: buttons;
-    display: grid;
-    grid-auto-rows: repeat(5, 20%);
-    gap: 1px 5px;
-  }
+#output {
+  background-color: #678e00;
+  border-radius: 10px;
+  font-family: "Orbitron", sans-serif;
+  grid-area: output;
+  letter-spacing: 0.1;
+  font-size: 13vh;
+  text-align: right;
+}
 
-  .buttons-first{
-    padding-top: 5px;
-    display: grid;
-    grid-auto-columns: 50% 25% 25%;
-    grid-template-areas: "erase plusminus division"
-  }
+button {
+  font-size: 2vh;
+}
 
-  #erase{
-    grid-area: erase;
-    
-  }
+.buttons {
+  padding-top: 5px;
+  grid-area: buttons;
+  display: grid;
+  grid-auto-rows: repeat(5, 20%);
+  gap: 1px 5px;
+}
 
-  #plusminus{
-    grid-area: plusminus;
-    
-  }
+.buttons-first {
+  padding-top: 5px;
+  display: grid;
+  grid-auto-columns: 50% 25% 25%;
+  grid-template-areas: "erase plusminus division";
+}
 
-  #dvision{
-    grid-area: division;
-    
-  }
+#erase {
+  grid-area: erase;
+}
 
-  .buttons-second{
-    display: grid;
-    grid-auto-columns: 25% 25% 25% 25%;
-    grid-template-areas: "seven eight nine multiply";
-  }
+#plusminus {
+  grid-area: plusminus;
+}
 
-  #seven{
-    grid-area: seven;
-  }
+#dvision {
+  grid-area: division;
+}
 
-  #eight{
-    grid-area: eight;
-  }
+.buttons-second {
+  display: grid;
+  grid-auto-columns: 25% 25% 25% 25%;
+  grid-template-areas: "seven eight nine multiply";
+}
 
-  #nine{
-    grid-area: nine;
-  }
+#seven {
+  grid-area: seven;
+}
 
-  #multiply{
-    grid-area: multiply;
-  }
+#eight {
+  grid-area: eight;
+}
 
-  .buttons-third{
-    display: grid;
-    grid-auto-columns: 25% 25% 25% 25%;
-    grid-template-areas: "four five six subtract"
-  }
+#nine {
+  grid-area: nine;
+}
 
-  #four{
-    grid-area: four;
-  }
+#multiply {
+  grid-area: multiply;
+}
 
-  #five{
-    grid-area: five;
-  }
+.buttons-third {
+  display: grid;
+  grid-auto-columns: 25% 25% 25% 25%;
+  grid-template-areas: "four five six subtract";
+}
 
-  #six{
-    grid-area: six;
-  }
-  
-  #subtract{
-    grid-area: subtract;
-  }
+#four {
+  grid-area: four;
+}
 
-  .buttons-fourth{
-    display: grid;
-    grid-auto-columns: 25% 25% 25% 25%;
-    grid-template-areas: "one two three addition";
-  }
+#five {
+  grid-area: five;
+}
 
-  #one{
-    grid-area: one;
-  }
+#six {
+  grid-area: six;
+}
 
-  #two{
-    grid-area: two;
-  }
+#subtract {
+  grid-area: subtract;
+}
 
-  #three{
-    grid-area: three;
-  }
+.buttons-fourth {
+  display: grid;
+  grid-auto-columns: 25% 25% 25% 25%;
+  grid-template-areas: "one two three addition";
+}
 
-  #addition{
-    grid-area: addition;
-  }
+#one {
+  grid-area: one;
+}
 
-  .buttons-fifth{
-    display: grid;
-    grid-auto-columns: 50% 25% 25%;
-    grid-template-areas: "zero decimal equal"
-  }
+#two {
+  grid-area: two;
+}
 
-  #zero{
-    grid-area: zero;
-  }
+#three {
+  grid-area: three;
+}
 
-  button{
-    background-color: #2a212c;
-    font-family: 'Saira Semi Condensed', sans-serif;  
+#addition {
+  grid-area: addition;
+}
+
+.buttons-fifth {
+  display: grid;
+  grid-auto-columns: 50% 25% 25%;
+  grid-template-areas: "zero decimal equal";
+}
+
+#zero {
+  grid-area: zero;
+}
+
+button {
+  background-color: #2a212c;
+  font-family: "Saira Semi Condensed", sans-serif;
   color: #678e00;
   border: 1px solid #678e00;
+}
+
+button:hover {
+  background-color: #3e8e41;
+}
+button:active {
+  background-color: #3e8e41;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
+@media (min-width: 30em) {
+  #calc-body {
+    position: relative;
+    height: 40%;
+    width: 30%;
   }
 
-  button:hover {
-    background-color: #3e8e41;
-  }
-  button:active {
-    background-color: #3e8e41;
-    box-shadow: 0 5px #666;
-    transform: translateY(4px);
+  #output {
+    font-size: 7vh;
   }
 
-  @media (min-width: 40em) {
-    #calc-body{
-      height: 40%;
-      width: 30%;
-    }
-
-    #output{
-      font-size: 8vh;
-    }
+  button {
+    font-size: 2vh;
   }
+}
+
+@media (min-width: 31em){
+  #calc-body{
+      min-height: 300px;
+      min-width: 400px;
+  }
+}
