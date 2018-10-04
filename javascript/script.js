@@ -12,10 +12,10 @@ $(document).ready(function () {
         roundDown = Math.floor(answer),
         check = answer.toString(),
         counter = 0,
-        arr = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
+        arr = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9],
+        overFlowCounter = 0;
 
     $("#answer").html("0");
-
 
 
     $(":button").click(function () {
@@ -114,7 +114,8 @@ $(document).ready(function () {
 
         //non-decimal digit count, with array of 2 items
         var nonDeciDigit = function () {
-            if (digitCount() == true) { $("#answer").html(answer.toExponential(2));
+            if (digitCount() == true) {
+                $("#answer").html(answer.toExponential(2));
                 digit = "";
                 array = [];
                 answer = "";
