@@ -8,16 +8,20 @@ body {
 }
 
 #calc-body {
-  height: 70%;
-  width: 90%;
+  position: absolute;
+  position: absolute;
+  top: 50%;
+  left: 50%; 
+  transform: translate(-50%, -50%);
+  height: 300px;
+  width: 400px;
   border: 2px solid #678e00;
   border-radius: 10px;
   background-color: #504055;
-  margin: 0 auto;
   padding: 10px 10px 0 10px;
   display: grid;
-  grid-auto-rows: 15% 78%;
-  grid-template-areas: "output" "buttons";
+  grid-template-rows: 15% 83%;
+  grid-template-areas: "output""buttons";
 }
 
 h1 {
@@ -27,34 +31,32 @@ h1 {
 
 #output {
   background-color: #678e00;
-  border-radius: 10px;
+  margin-top: 5px;
+  border-radius: 3px;
   font-family: "Orbitron", sans-serif;
   grid-area: output;
   letter-spacing: 0.1;
-  font-size: 5.5vh;
+  font-size: 1.7vw;
   text-align: right;
 }
 
-#answer{
+#answer {
   padding-right: 2%;
 }
 
-button {
-  font-size: 2vh;
-}
-
 .buttons {
-  padding-top: 5px;
+  width: 99%;
+  margin: 2px;
   grid-area: buttons;
   display: grid;
-  grid-auto-rows: repeat(5, 20%);
+  grid-template-rows: repeat(5, 1fr);
   gap: 1px 5px;
 }
 
 .buttons-first {
   padding-top: 5px;
   display: grid;
-  grid-auto-columns: 50% 25% 25%;
+  grid-template-columns: 50% 25% 25%;
   grid-template-areas: "erase plusminus division";
 }
 
@@ -72,7 +74,7 @@ button {
 
 .buttons-second {
   display: grid;
-  grid-auto-columns: 25% 25% 25% 25%;
+  grid-template-columns: 25% 25% 25% 25%;
   grid-template-areas: "seven eight nine multiply";
 }
 
@@ -94,7 +96,7 @@ button {
 
 .buttons-third {
   display: grid;
-  grid-auto-columns: 25% 25% 25% 25%;
+  grid-template-columns: 25% 25% 25% 25%;
   grid-template-areas: "four five six subtract";
 }
 
@@ -116,7 +118,7 @@ button {
 
 .buttons-fourth {
   display: grid;
-  grid-auto-columns: 25% 25% 25% 25%;
+  grid-template-columns: 25% 25% 25% 25%;
   grid-template-areas: "one two three addition";
 }
 
@@ -138,7 +140,7 @@ button {
 
 .buttons-fifth {
   display: grid;
-  grid-auto-columns: 50% 25% 25%;
+  grid-template-columns: 50% 25% 25%;
   grid-template-areas: "zero decimal equal";
 }
 
@@ -156,31 +158,25 @@ button {
 button:hover {
   background-color: #3e8e41;
 }
+
 button:active {
   background-color: #3e8e41;
   box-shadow: 0 5px #666;
   transform: translateY(4px);
 }
 
-@media (min-width: 30em) {
+@media (max-width: 600px) {
   #calc-body {
     position: relative;
-    height: 40%;
-    width: 30%;
+    height: 60%;
+    width: 80%;
   }
 
   #output {
-    font-size: 1.5vw;
+    font-size: 10vw;
   }
 
   button {
-    font-size: 1vw;
+    font-size: 7vw;
   }
-}
-
-@media (min-width: 31em){
-  #calc-body{
-      min-height: 300px;
-      min-width: 400px;
-  }
-}
+} 
